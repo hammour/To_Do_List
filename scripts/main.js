@@ -1,18 +1,27 @@
 var taskData = [];
+var newTaskEl = document.getElementById('newTask');
+var btnOneEl = document.getElementById('btnOne');
 
 
 
 
-//create a task constructor
-function Task(whatToDo, status, nowDate){
-	this.whatToDo=whatToDo;
-	this.status=true;
-	this.nowDate= new Date();
-	taskData.push(this);
-}
 
-// incase of click create an object called task using task constructor.
+function addNewTask(whatToDo){
+	
+	return {'task': whatToDo, 'date':  new Date(), 'Active': true};
+	
+	}
 
+
+
+
+btnOneEl.addEventListener('click', function(){taskData.push(addNewTask(newTaskEl.value))},false);
 
 // add that object to an an array of objects tasks data base.
+
+//el.addEventListener("click", modifyText, false); use to update task status.
+
+// Display Array in browswer
+
+
 
